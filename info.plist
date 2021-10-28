@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>psu.alfred.timetracker</string>
+	<key>connections</key>
+	<dict>
+		<key>2C46048A-4C94-4EDF-9AAB-BFFC48B3FE61</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6083FF69-5049-4830-816F-6BE0E8C87928</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>55F49542-A653-4B83-A384-98D379FA022A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>69B396AD-8237-46FD-895D-1E42396FB730</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6083FF69-5049-4830-816F-6BE0E8C87928</key>
+		<array/>
+		<key>69B396AD-8237-46FD-895D-1E42396FB730</key>
+		<array/>
+		<key>7452EF9F-3E6C-4091-87E5-828D3F6FE004</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B0F9A9A2-7877-4DDA-B20E-72FDE22B0739</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9A90C559-BA6F-49D1-9B50-E89FA491CB4B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DB31E074-5EA3-4842-B7EC-72D36533219E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EC378AE9-D37C-40A9-A180-8DB660E24D54</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DB31E074-5EA3-4842-B7EC-72D36533219E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>psu</string>
+	<key>description</key>
+	<string>Add work time to Google Calender (via IFTTT)</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Time tracker</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>tt</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>/usr/bin/python ./list_filter.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Time tracker</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>55F49542-A653-4B83-A384-98D379FA022A</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python ./action.py "{query}" "$wf_input"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>69B396AD-8237-46FD-895D-1E42396FB730</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>action</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>2C46048A-4C94-4EDF-9AAB-BFFC48B3FE61</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>_tracktime reset</string>
+				<key>subtext</key>
+				<string>Time tracker</string>
+				<key>text</key>
+				<string>Clear history data</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>7452EF9F-3E6C-4091-87E5-828D3F6FE004</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>from workflow import Workflow3
+wf = Workflow3()
+wf.clear_data()</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B0F9A9A2-7877-4DDA-B20E-72FDE22B0739</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>_tracktime startreminder</string>
+				<key>subtext</key>
+				<string>Time tracker</string>
+				<key>text</key>
+				<string>Manually start reminder</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>9A90C559-BA6F-49D1-9B50-E89FA491CB4B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>python ./timetracker.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6083FF69-5049-4830-816F-6BE0E8C87928</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python action.py "reminder" "n/a"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DB31E074-5EA3-4842-B7EC-72D36533219E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>start_reminder</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>EC378AE9-D37C-40A9-A180-8DB660E24D54</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Roadmap
+- Reminder about ongoing tracker
+- Add time of selected length (30 min, 1 h, 1.5 h etc.)
+
+v2.0
+- Notification reminder to track time
+   - Autostart reminder (on/off)
+   - Workhours and weekdays
+   - Set reminder interval
+   - Reminder "dies" after computer sleep etc.
+      - Manually start reminder
+      - External trigger to start reminder
+      - Start reminder at first use of keyword
+
+v1.0
+- List filter
+   - Actions: start, stop, add (1 h)
+   - History
+   - Only show actions when applicable 
+- Trigger IFTTT and add to Google Calendar
+   - Using start/end of timer or time for add ("trailing")
+   - Minimum time (30 min)
+   - Snap to closest quarter of an hour
+- Notifications
+- Reset of stored data</string>
+	<key>uidata</key>
+	<dict>
+		<key>2C46048A-4C94-4EDF-9AAB-BFFC48B3FE61</key>
+		<dict>
+			<key>note</key>
+			<string>set action</string>
+			<key>xpos</key>
+			<integer>975</integer>
+			<key>ypos</key>
+			<integer>275</integer>
+		</dict>
+		<key>55F49542-A653-4B83-A384-98D379FA022A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>90</integer>
+		</dict>
+		<key>6083FF69-5049-4830-816F-6BE0E8C87928</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1235</integer>
+			<key>ypos</key>
+			<integer>435</integer>
+		</dict>
+		<key>69B396AD-8237-46FD-895D-1E42396FB730</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>90</integer>
+		</dict>
+		<key>7452EF9F-3E6C-4091-87E5-828D3F6FE004</key>
+		<dict>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>300</integer>
+		</dict>
+		<key>9A90C559-BA6F-49D1-9B50-E89FA491CB4B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>430</integer>
+		</dict>
+		<key>B0F9A9A2-7877-4DDA-B20E-72FDE22B0739</key>
+		<dict>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>300</integer>
+		</dict>
+		<key>DB31E074-5EA3-4842-B7EC-72D36533219E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>495</integer>
+		</dict>
+		<key>EC378AE9-D37C-40A9-A180-8DB660E24D54</key>
+		<dict>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>555</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>default_length</key>
+		<string>60</string>
+		<key>ifttt_event</key>
+		<string>track_time</string>
+		<key>ifttt_key</key>
+		<string>cZ0276vB6GHGvtsd4lUMBU</string>
+		<key>reminder_autostart</key>
+		<string>true</string>
+		<key>reminder_interval</key>
+		<string>1</string>
+		<key>workhours_begin</key>
+		<string>08:30</string>
+		<key>workhours_end</key>
+		<string>18:00</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>ifttt_key</string>
+		<string>ifttt_event</string>
+	</array>
+	<key>version</key>
+	<string>2.0</string>
+	<key>webaddress</key>
+	<string>http://pontus.cc</string>
+</dict>
+</plist>
