@@ -422,8 +422,8 @@ v1.0
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>ifttt_key</string>
 		<string>ifttt_event</string>
+		<string>ifttt_key</string>
 	</array>
 	<key>version</key>
 	<string>2.0</string>
