@@ -1,3 +1,4 @@
 *.pyc
 .alfred*
 *__backup*
+*__old*

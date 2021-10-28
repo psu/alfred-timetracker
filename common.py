@@ -20,7 +20,7 @@ def check_workhours():
   now               = datetime.now()
   begin             = now.replace(hour=int(begin_h), minute=int(begin_m))
   end               = now.replace(hour=int(end_h), minute=int(end_m))
-  day               = datetime.datetime.today().weekday()
+  day               = datetime.today().weekday()
   weekdays          = False
   if day < 5: weekdays = True
   return (begin <= now <= end) and weekdays
@@ -33,7 +33,7 @@ def start_reminder():
   active_timer = wf.stored_data('active_timer')
   if not active_reminder: wf.store_data('active_reminder', unix_timestamp())
   if not active_timer and active_reminder <= (unix_timestamp() - calc_interval()):
-    run_in_background('reminder'+str(unix_timestamp()), ['/usr/bin/python', wf.workflowfile('reminder.py')])
+    run_in_background('reminder_'+str(unix_timestamp()), ['/usr/bin/python', wf.workflowfile('reminder.py')])
     wf.store_data('active_reminder', unix_timestamp())
 
 def unix_timestamp():
